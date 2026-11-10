@@ -1,0 +1,65 @@
+name: Release
+
+# Builds the bundle from this repository's source whenever a sync changes the version
+# in gradle.properties, and publishes it with a patches-bundle.json for Morphe.
+
+on:
+  push:
+    branches: [main]
+    paths: [gradle.properties]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Read version
+        id: version
+        run: |
+          version=$(sed -n 's/^version *= *//p' gradle.properties)
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          if gh release view "v$version" > /dev/null 2>&1; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          fi
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Setup Java
+        if: steps.version.outputs.exists != 'true'
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Install Android SDK packages
+        if: steps.version.outputs.exists != 'true'
+        run: yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platforms;android-36" "build-tools;36.0.0" > /dev/null
+
+      # Morphe libraries come from GitHub Packages, which any GitHub token can read.
+      - name: Build
+        if: steps.version.outputs.exists != 'true'
+        run: ./gradlew buildAndroid --no-daemon
+        env:
+          GITHUB_ACTOR: ${{ github.actor }}
+          GITHUB_TOKEN: ${{ github.token }}
+
+      - name: Publish release
+        if: steps.version.outputs.exists != 'true'
+        run: |
+          version="${{ steps.version.outputs.version }}"
+          mpp="patches/build/libs/patches-$version.mpp"
+          unzip -l "$mpp" | grep -q ' classes.dex$' || { echo "classes.dex missing from $mpp"; exit 1; }
+          url="https://github.com/${{ github.repository }}/releases/download/v$version/patches-$version.mpp"
+          jq -n --arg version "$version" --arg url "$url" --arg created "$(date -u +%Y-%m-%dT%H:%M:%S)" \
+            '{created_at: $created, description: "", download_url: $url, signature_download_url: "", version: $version}' \
+            > patches-bundle.json
+          gh release create "v$version" "$mpp" patches-bundle.json --title "v$version" --target "$GITHUB_SHA" \
+            --notes "Built from this repository at ${GITHUB_SHA::7}. Add to Morphe: https://github.com/${{ github.repository }}/releases/latest/download/patches-bundle.json"
+        env:
+          GH_TOKEN: ${{ github.token }}
