@@ -2,10 +2,10 @@ group = "app.template"
 
 patches {
     about {
-        name = "Winter's Patches"
+        name = "Kanye's Patches"
         description = "Patches for Brave, Bare, Titanium, Notesnook, Joplin, Anytype, and Bitwarden"
         source = ""
-        author = "winter"
+        author = "kanye"
         contact = "na"
         website = "na"
         license = "GPLv3"

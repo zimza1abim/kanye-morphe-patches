@@ -1,6 +1,6 @@
 <div align="center">
 
-# ❄️ Winter's Patches
+# Kanye's Patches
 
 **Custom fonts for browsers and note apps, plus small fixes for things that get in the way. Patches for use with Morphe.**
 
@@ -178,7 +178,7 @@ Each listed version passed patching and verification. Other versions may fail to
 ## 🩹 Patches
 
 <!-- PATCHES_START -->
-> **[v0.0.1](../../releases/tag/v0.0.1)**&nbsp;&nbsp;•&nbsp;&nbsp;17 patches total
+> **[v0.0.2](../../releases/tag/v0.0.2)**&nbsp;&nbsp;•&nbsp;&nbsp;17 patches total
 <details>
 <summary>📦 Anytype&nbsp;&nbsp;•&nbsp;&nbsp;1 patch</summary>
 <br>
@@ -387,7 +387,3 @@ No. The patch code makes no network requests. The font you choose is stored only
 Released under [GPLv3](LICENSE).
 
 This is a collection of patches for use with [Morphe](https://github.com/MorpheApp). It is not made or endorsed by the Morphe project. App names and trademarks belong to their respective owners.
-
-<div align="center">
-<sub>❄️ Made by winter</sub>
-</div>
