@@ -1,7 +1,7 @@
 name: Release
 
 # Builds the bundle from this repository's source whenever a sync changes the version
-# in gradle.properties, and publishes it with a patches-bundle.json for Morphe.
+# in gradle.properties, publishes it, and commits patches-bundle.json for Morphe.
 
 on:
   push:
@@ -60,6 +60,15 @@ jobs:
             '{created_at: $created, description: "", download_url: $url, signature_download_url: "", version: $version}' \
             > patches-bundle.json
           gh release create "v$version" "$mpp" patches-bundle.json --title "v$version" --target "$GITHUB_SHA" \
-            --notes "Built from this repository at ${GITHUB_SHA::7}. Add to Morphe: https://github.com/${{ github.repository }}/releases/latest/download/patches-bundle.json"
+            --notes "Built from this repository at ${GITHUB_SHA::7}. Add to Morphe: github.com/${{ github.repository }}"
         env:
           GH_TOKEN: ${{ github.token }}
+
+      # Morphe reads patches-bundle.json from the main branch of a repository source.
+      - name: Commit patches-bundle.json
+        if: steps.version.outputs.exists != 'true'
+        run: |
+          git add patches-bundle.json
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+            commit -q -m "Update patches-bundle.json for v${{ steps.version.outputs.version }}"
+          git push origin HEAD:main

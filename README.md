@@ -14,7 +14,7 @@
 </div>
 
 > [!TIP]
-> **Add to Morphe:** `https://github.com/zimza1abim/kanye-morphe-patches/releases/latest/download/patches-bundle.json`
+> **Add to Morphe:** Sources → **+** → Remote → `github.com/zimza1abim/kanye-morphe-patches`
 >
 > Each `.mpp` on [Releases](../../releases) is built by GitHub Actions from the source in this repository. Development happens elsewhere and is synced here on every release.
 
@@ -114,7 +114,7 @@ flowchart LR
 ```
 
 1. Download the **original APK** from the table above.
-2. In Morphe, **add the bundle URL** above, or download the `.mpp` from [Releases](../../releases).
+2. In Morphe, **add the repository** above as a remote source, or download the `.mpp` from [Releases](../../releases).
 3. Choose the app, select the patches you want, and patch.
 4. Install the result and turn the feature on from the location below.
 
@@ -178,7 +178,7 @@ Each listed version passed patching and verification. Other versions may fail to
 ## 🩹 Patches
 
 <!-- PATCHES_START -->
-> **[v0.0.2](../../releases/tag/v0.0.2)**&nbsp;&nbsp;•&nbsp;&nbsp;17 patches total
+> **[v0.0.3](../../releases/tag/v0.0.3)**&nbsp;&nbsp;•&nbsp;&nbsp;17 patches total
 <details>
 <summary>📦 Anytype&nbsp;&nbsp;•&nbsp;&nbsp;1 patch</summary>
 <br>
