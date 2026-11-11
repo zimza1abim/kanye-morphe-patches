@@ -164,8 +164,8 @@ Each listed version passed patching and verification. Other versions may fail to
 | App | Package | Supported versions |
 |---|---|---|
 | Anytype | `io.anytype.app` | `0.48.10` `0.49.0` `0.50.4` |
-| Titanium Browser | `io.github.jqssun.helium` | `155.0.8059.79` `156.0.8078.47` `156.0.8078.73` `156.0.8078.79` `157.0.8103.38` |
-| Bare Browser | `org.barebrowser` | `1.0.0` `1.0.1` |
+| Titanium Browser | `io.github.jqssun.helium` | `155.0.8059.79` `156.0.8078.47` `156.0.8078.73` `156.0.8078.79` `157.0.8103.38` `157.0.8103.50` |
+| Bare Browser | `org.barebrowser` | `1.0.0` `1.0.1` `2.0.2` |
 | Bitwarden | `com.x8bit.bitwarden` | `2026.10.1` |
 | Brave Browser | `com.brave.browser` | `1.97.57` `1.98.58` `1.98.59` `1.98.60` `1.98.62` `1.98.63` `1.99.55` |
 | Joplin | `net.cozic.joplin` | `3.7.8` `3.7.10` `3.7.11` |
@@ -178,7 +178,7 @@ Each listed version passed patching and verification. Other versions may fail to
 ## 🩹 Patches
 
 <!-- PATCHES_START -->
-> **[v0.0.3](../../releases/tag/v0.0.3)**&nbsp;&nbsp;•&nbsp;&nbsp;17 patches total
+> **[v0.0.4](../../releases/tag/v0.0.4)**&nbsp;&nbsp;•&nbsp;&nbsp;17 patches total
 <details>
 <summary>📦 Anytype&nbsp;&nbsp;•&nbsp;&nbsp;1 patch</summary>
 <br>
@@ -200,8 +200,8 @@ Each listed version passed patching and verification. Other versions may fail to
 
 **🎯 Supported versions:**
 
-| 155.0.8059.79 | 156.0.8078.47 | 156.0.8078.73 | 156.0.8078.79 | 157.0.8103.38 |
-| :---: | :---: | :---: | :---: | :---: |
+| 155.0.8059.79 | 156.0.8078.47 | 156.0.8078.73 | 156.0.8078.79 | 157.0.8103.38 | 157.0.8103.50 |
+| :---: | :---: | :---: | :---: | :---: | :---: |
 
 | 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |
 |----------|----------------|-----------|
@@ -218,8 +218,8 @@ Each listed version passed patching and verification. Other versions may fail to
 
 **🎯 Supported versions:**
 
-| 1.0.0 | 1.0.1 |
-| :---: | :---: |
+| 1.0.0 | 1.0.1 | 2.0.2 |
+| :---: | :---: | :---: |
 
 | 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |
 |----------|----------------|-----------|

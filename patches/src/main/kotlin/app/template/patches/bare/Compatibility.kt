@@ -13,6 +13,7 @@ internal const val BARE_PACKAGE_NAME = "org.barebrowser"
 internal val BARE_VERSIONS = listOf(
     "1.0.0",
     "1.0.1",
+    "2.0.2",
 )
 
 internal fun bareCompatibility() = Compatibility(
