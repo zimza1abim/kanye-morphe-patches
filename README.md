@@ -9,14 +9,18 @@
 ![Morphe](https://img.shields.io/badge/for%20use%20with-Morphe-7C4DFF)
 ![Apps](https://img.shields.io/badge/apps-7-orange)
 
+<a href="https://morphe.software/add-source?github=zimza1abim/kanye-morphe-patches">
+  <img src=".github/assets/add-to-morphe.svg" alt="Add to Morphe" height="48">
+</a>
+
 [Supported apps](#-supported-apps) · [Features](#-features) · [Getting started](#-getting-started) · [Supported versions](#-supported-versions) · [FAQ](#-faq)
 
 </div>
 
 > [!TIP]
-> **Add to Morphe:** Sources → **+** → Remote → `github.com/zimza1abim/kanye-morphe-patches`
+> **Add to Morphe:** tap the button above, or Sources → **+** → Remote → `github.com/zimza1abim/kanye-morphe-patches`
 >
-> Each `.mpp` on [Releases](../../releases) is built by GitHub Actions from the source in this repository. Development happens elsewhere and is synced here on every release.
+> Each `.mpp` on [Releases](../../releases) is built by GitHub Actions from the source in this repository and signed. Morphe checks the signature before installing an update. Development happens elsewhere and is synced here on every release.
 
 ---
 
@@ -178,7 +182,7 @@ Each listed version passed patching and verification. Other versions may fail to
 ## 🩹 Patches
 
 <!-- PATCHES_START -->
-> **[v0.0.4](../../releases/tag/v0.0.4)**&nbsp;&nbsp;•&nbsp;&nbsp;17 patches total
+> **[v0.0.5](../../releases/tag/v0.0.5)**&nbsp;&nbsp;•&nbsp;&nbsp;17 patches total
 <details>
 <summary>📦 Anytype&nbsp;&nbsp;•&nbsp;&nbsp;1 patch</summary>
 <br>
