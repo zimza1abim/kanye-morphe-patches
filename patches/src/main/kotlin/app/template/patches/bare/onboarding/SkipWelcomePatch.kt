@@ -10,9 +10,13 @@ import app.morphe.patcher.util.smali.ExternalLabel
 import app.template.patches.bare.bareCompatibility
 import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.builder.BuilderOffsetInstruction
+import com.android.tools.smali.dexlib2.iface.instruction.OffsetInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
 import com.android.tools.smali.dexlib2.iface.reference.MethodReference
 import com.android.tools.smali.dexlib2.iface.reference.StringReference
+
+/** Largest forward reach of the 8-bit `goto` opcode, in code units. */
+private const val MAX_GOTO_8_OFFSET = 127
 
 /**
  * ChromeTabbedActivity's post-inflation step. It shows Bare's welcome flow (Welcome to
@@ -53,21 +57,20 @@ val skipBareWelcomePatch = bytecodePatch(
 
         val welcomeIndex = stringIndex("bare_welcome")
         val installIndex = stringIndex("shown_for_install")
-        // Bare leaves the flow with the first goto after its per-install check; that
-        // destination is the normal startup path, so jump there before reading the prefs.
-        // 2.0.4 moved the welcome UI into a helper and left short branches (plain
-        // `goto` back into the toolbar setup) between the prefs read and that exit, so
-        // take the first branching instruction that really leaves the welcome region.
+        // The welcome block is long, so Bare leaves it for the normal startup path with a
+        // wide goto (goto/16, goto/32); an 8-bit `goto` cannot reach that far and only
+        // branches inside the block. 2.0.4 moved the welcome UI into a helper and left such
+        // a short `goto` between the prefs read and the exit, so select the branch by its
+        // reach instead of taking the first one.
         val exitIndex = (installIndex + 1 until instructions.size).firstOrNull { index ->
-            if (instructions[index].opcode !in setOf(Opcode.GOTO, Opcode.GOTO_16, Opcode.GOTO_32)) return@firstOrNull false
-            val target = method.getInstruction<BuilderOffsetInstruction>(index).target.location.instruction
-                ?: return@firstOrNull false
-            instructions.indexOf(target) > installIndex + 32
+            val instruction = instructions[index]
+            if (instruction.opcode !in setOf(Opcode.GOTO, Opcode.GOTO_16, Opcode.GOTO_32)) return@firstOrNull false
+            (instruction as OffsetInstruction).codeOffset > MAX_GOTO_8_OFFSET
         } ?: throw PatchException("Bare welcome exit branch not found")
         val exitTarget = method.getInstruction<BuilderOffsetInstruction>(exitIndex).target.location.instruction
             ?: throw PatchException("Bare welcome exit target not resolved")
         val exitTargetIndex = instructions.indexOf(exitTarget)
-        if (exitTargetIndex <= installIndex + 32 || stringIndex("bare_welcome") > exitTargetIndex) {
+        if (exitTargetIndex <= installIndex) {
             throw PatchException("Unexpected Bare welcome flow shape: exit=$exitTargetIndex")
         }
 
