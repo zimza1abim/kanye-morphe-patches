@@ -11,6 +11,7 @@ import app.template.patches.bare.bareCompatibility
 import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.builder.BuilderOffsetInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
+import com.android.tools.smali.dexlib2.iface.reference.MethodReference
 import com.android.tools.smali.dexlib2.iface.reference.StringReference
 
 /**
@@ -22,6 +23,17 @@ internal object BareWelcomeFingerprint : Fingerprint(
     returnType = "V",
     parameters = emptyList(),
     filters = listOf(string("bare_welcome"), string("shown_for_install")),
+    // Bare 2.0.4 also writes these prefs from the backup-restore page, which runs the
+    // same first-install bookkeeping. Only the startup path reads them back, so require
+    // the per-install read and never patch the writer.
+    custom = { method, _ ->
+        method.implementation?.instructions?.any {
+            val reference = (it as? ReferenceInstruction)?.reference
+            reference is MethodReference &&
+                reference.definingClass == "Landroid/content/SharedPreferences;" &&
+                reference.name == "getLong"
+        } == true
+    },
 )
 
 @Suppress("unused")
@@ -43,8 +55,14 @@ val skipBareWelcomePatch = bytecodePatch(
         val installIndex = stringIndex("shown_for_install")
         // Bare leaves the flow with the first goto after its per-install check; that
         // destination is the normal startup path, so jump there before reading the prefs.
-        val exitIndex = (installIndex until instructions.size).firstOrNull {
-            instructions[it].opcode in setOf(Opcode.GOTO, Opcode.GOTO_16, Opcode.GOTO_32)
+        // 2.0.4 moved the welcome UI into a helper and left short branches (plain
+        // `goto` back into the toolbar setup) between the prefs read and that exit, so
+        // take the first branching instruction that really leaves the welcome region.
+        val exitIndex = (installIndex + 1 until instructions.size).firstOrNull { index ->
+            if (instructions[index].opcode !in setOf(Opcode.GOTO, Opcode.GOTO_16, Opcode.GOTO_32)) return@firstOrNull false
+            val target = method.getInstruction<BuilderOffsetInstruction>(index).target.location.instruction
+                ?: return@firstOrNull false
+            instructions.indexOf(target) > installIndex + 32
         } ?: throw PatchException("Bare welcome exit branch not found")
         val exitTarget = method.getInstruction<BuilderOffsetInstruction>(exitIndex).target.location.instruction
             ?: throw PatchException("Bare welcome exit target not resolved")

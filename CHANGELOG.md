@@ -1,3 +1,10 @@
+## [0.0.11](https://github.com/zimza1abim/kanye-morphe-patches/compare/v0.0.10...v0.0.11) (2026-11-16)
+
+### 🐛 Bug Fixes
+
+* skip Bare welcome screens on 2.0.4
+
+
 ## [0.0.10](https://github.com/zimza1abim/kanye-morphe-patches/compare/v0.0.9...v0.0.10) (2026-11-14)
 
 ### 🚀 Updated App Support
