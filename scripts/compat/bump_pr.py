@@ -72,6 +72,10 @@ def main():
     if not added:
         print("Staged versions are already supported.")
         return
+    # Keep each bumped app at its three newest versions, adapters included.
+    removed = run("python3", "-I", "scripts/compat/prune_versions.py", *[path.stem for path in records])
+    if removed:
+        print(removed)
 
     previous = []
     if open_pr and open_pr["title"].startswith(PREFIX):
@@ -86,14 +90,19 @@ def main():
             run("git", "push", "origin", BRANCH)
         gh("pr", "edit", str(open_pr["number"]), "--title", title, "--body-file", str(body_file))
         print(f"Extended PR #{open_pr['number']}: {title}")
+        number = open_pr["number"]
     else:
         body_file.write_text("\n\n".join(reports))
         if not DRY_RUN:
             # A merged or closed bump PR can leave the branch behind; start it over from main.
             run("git", "push", "--force", "origin", BRANCH)
-        print(gh("pr", "create", "--base", "main", "--head", BRANCH,
-                 "--title", title, "--body-file", str(body_file)))
+        url = gh("pr", "create", "--base", "main", "--head", BRANCH, "--title", title, "--body-file", str(body_file))
+        print(url)
         print(f"Opened: {title}")
+        number = url.rstrip("/").rsplit("/", 1)[-1]
+    # A PR opened with GITHUB_TOKEN starts no workflow, so run the merge gate here.
+    if not DRY_RUN:
+        print(run("python3", "-I", "scripts/ci/pr_gate.py", str(number)))
 
 
 if __name__ == "__main__":
