@@ -1,3 +1,10 @@
+## [0.0.16](https://github.com/zimza1abim/kanye-morphe-patches/compare/v0.0.15...v0.0.16) (2026-11-18)
+
+### 🚀 Updated App Support
+
+* support Bare 2.0.5
+
+
 ## [0.0.15](https://github.com/zimza1abim/kanye-morphe-patches/compare/v0.0.14...v0.0.15) (2026-11-18)
 
 ### 🔧 Improvements

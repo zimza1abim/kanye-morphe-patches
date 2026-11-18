@@ -19,7 +19,17 @@ DRY_RUN = os.environ.get("DRY_RUN") == "1"
 
 
 def run(*args, check=True):
-    return subprocess.run(args, check=check, text=True, capture_output=True).stdout.strip()
+    try:
+        result = subprocess.run(args, check=check, text=True, capture_output=True)
+    except subprocess.CalledProcessError as error:
+        # A failing add_version.py explains itself on stderr; a bare traceback hides it.
+        if error.stderr:
+            print(error.stderr.rstrip(), file=sys.stderr)
+        raise
+    if result.stderr.strip():
+        # add_version.py warns on stderr when it skips a bump.
+        print(result.stderr.rstrip(), file=sys.stderr)
+    return result.stdout.strip()
 
 
 def gh(*args):
