@@ -1,8 +1,8 @@
 {
-  "created_at": "2026-11-18T01:05:43",
-  "description": "## [0.0.13](https://github.com/zimza1abim/kanye-morphe-patches/compare/v0.0.12...v0.0.13) (2026-11-18)\n\n### 🚀 Updated App Support\n\n* support Notesnook 3.4.16\n\n\n",
-  "download_url": "https://github.com/zimza1abim/kanye-morphe-patches/releases/download/v0.0.13/patches-0.0.13.mpp",
+  "created_at": "2026-11-18T01:47:44",
+  "description": "## [0.0.14](https://github.com/zimza1abim/kanye-morphe-patches/compare/v0.0.13...v0.0.14) (2026-11-18)\n\n### 🐛 Bug Fixes\n\n* keep only the three newest supported versions per app\n\n\n",
+  "download_url": "https://github.com/zimza1abim/kanye-morphe-patches/releases/download/v0.0.14/patches-0.0.14.mpp",
   "signature_download_url": "",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "public_key": "9Yt2+vsECbAZcF9+N7nm446RsMM40WTDQq0kg4RiK30="
 }
