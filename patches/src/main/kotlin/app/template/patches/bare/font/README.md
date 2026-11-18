@@ -2,7 +2,7 @@
 
 ARM64 port of the Brave webpage-font engine for `org.barebrowser`, first ported
 against Bare 1.0.0 (Chromium `156.0.8078.25`), a release that has since left the
-supported list; the current supported floor is `2.0.2`. Bare is a Chromium fork
+supported list; the current supported floor is `2.0.3`. Bare is a Chromium fork
 with the same Java seams and `FontFallbackIterator::Next()` shape as Brave, so this
 directory mirrors `../../brave/font` with Bare's package, settings key and extension classes.
 
@@ -24,5 +24,5 @@ sh native/brave/font/build-arm64.sh bare
 Static checks were first taken on Bare 1.0.0: the Brave locator
 (`scripts/brave/NativeLocatorCheck.c`) finds exactly one candidate (stage field 24,
 system stage 4); every patch applies and the rewritten dex verifies. The same locator
-and compat smoke have passed on every supported release since (2.0.2–2.0.4). Rendering
+and compat smoke have passed on every supported release since (2.0.3–2.0.5). Rendering
 still has to be confirmed on a device (`adb logcat -s BareFontNative`).

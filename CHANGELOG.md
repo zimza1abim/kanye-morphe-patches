@@ -1,3 +1,10 @@
+## [0.0.17](https://github.com/zimza1abim/kanye-morphe-patches/compare/v0.0.16...v0.0.17) (2026-11-18)
+
+### 🐛 Bug Fixes
+
+* report dropped versions instead of a no-op add
+
+
 ## [0.0.16](https://github.com/zimza1abim/kanye-morphe-patches/compare/v0.0.15...v0.0.16) (2026-11-18)
 
 ### 🚀 Updated App Support
