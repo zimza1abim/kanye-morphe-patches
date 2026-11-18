@@ -1,3 +1,10 @@
+## [0.0.18](https://github.com/zimza1abim/kanye-morphe-patches/compare/v0.0.17...v0.0.18) (2026-11-18)
+
+### 🔧 Improvements
+
+* update the mirror's documentation and release setup
+
+
 ## [0.0.17](https://github.com/zimza1abim/kanye-morphe-patches/compare/v0.0.16...v0.0.17) (2026-11-18)
 
 ### 🐛 Bug Fixes
