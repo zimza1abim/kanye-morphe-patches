@@ -1,3 +1,10 @@
+## [0.0.13](https://github.com/zimza1abim/kanye-morphe-patches/compare/v0.0.12...v0.0.13) (2026-11-18)
+
+### 🚀 Updated App Support
+
+* support Notesnook 3.4.16
+
+
 ## [0.0.12](https://github.com/zimza1abim/kanye-morphe-patches/compare/v0.0.11...v0.0.12) (2026-11-16)
 
 ### 🐛 Bug Fixes

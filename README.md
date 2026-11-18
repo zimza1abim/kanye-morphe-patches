@@ -173,7 +173,7 @@ Each listed version passed patching and verification. Other versions may fail to
 | Bitwarden | `com.x8bit.bitwarden` | `2026.10.1` |
 | Brave Browser | `com.brave.browser` | `1.97.57` `1.98.58` `1.98.59` `1.98.60` `1.98.62` `1.98.63` `1.99.55` `1.100.56` |
 | Joplin | `net.cozic.joplin` | `3.7.8` `3.7.10` `3.7.11` |
-| Notesnook | `com.streetwriters.notesnook` | `3.4.14` `3.4.15` |
+| Notesnook | `com.streetwriters.notesnook` | `3.4.14` `3.4.15` `3.4.16` |
 <!-- VERSIONS_END -->
 
 > [!NOTE]
@@ -182,7 +182,7 @@ Each listed version passed patching and verification. Other versions may fail to
 ## 🩹 Patches
 
 <!-- PATCHES_START -->
-> **[v0.0.12](../../releases/tag/v0.0.12)**&nbsp;&nbsp;•&nbsp;&nbsp;17 patches total
+> **[v0.0.13](../../releases/tag/v0.0.13)**&nbsp;&nbsp;•&nbsp;&nbsp;17 patches total
 <details>
 <summary>📦 Anytype&nbsp;&nbsp;•&nbsp;&nbsp;1 patch</summary>
 <br>
@@ -289,8 +289,8 @@ Each listed version passed patching and verification. Other versions may fail to
 
 **🎯 Supported versions:**
 
-| 3.4.14 | 3.4.15 |
-| :---: | :---: |
+| 3.4.14 | 3.4.15 | 3.4.16 |
+| :---: | :---: | :---: |
 
 | 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |
 |----------|----------------|-----------|
