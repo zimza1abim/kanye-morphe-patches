@@ -169,11 +169,12 @@ Each listed version passed patching and verification. Other versions may fail to
 |---|---|---|
 | Anytype | `io.anytype.app` | `0.48.10` `0.49.0` `0.50.4` |
 | Titanium Browser | `io.github.jqssun.helium` | `157.0.8103.38` `157.0.8103.50` `157.0.8103.78` |
-| Bare Browser | `org.barebrowser` | `2.0.3` `2.0.4` `2.0.5` |
+| Bare Browser | `org.barebrowser` | `2.0.4` `2.0.5` `2.0.7` |
 | Bitwarden | `com.x8bit.bitwarden` | `2026.10.1` |
 | Brave Browser | `com.brave.browser` | `1.98.63` `1.99.55` `1.100.56` |
 | Joplin | `net.cozic.joplin` | `3.7.8` `3.7.10` `3.7.11` |
 | Notesnook | `com.streetwriters.notesnook` | `3.4.14` `3.4.15` `3.4.16` |
+| OpenBot | `run.openbot.mobile` | `1.4.11` |
 <!-- VERSIONS_END -->
 
 > [!NOTE]
@@ -182,7 +183,7 @@ Each listed version passed patching and verification. Other versions may fail to
 ## 🩹 Patches
 
 <!-- PATCHES_START -->
-> **[v0.0.19](../../releases/tag/v0.0.19)**&nbsp;&nbsp;•&nbsp;&nbsp;17 patches total
+> **[v0.1.0](../../releases/tag/v0.1.0)**&nbsp;&nbsp;•&nbsp;&nbsp;18 patches total
 <details>
 <summary>📦 Anytype&nbsp;&nbsp;•&nbsp;&nbsp;1 patch</summary>
 <br>
@@ -222,7 +223,7 @@ Each listed version passed patching and verification. Other versions may fail to
 
 **🎯 Supported versions:**
 
-| 2.0.3 | 2.0.4 | 2.0.5 |
+| 2.0.4 | 2.0.5 | 2.0.7 |
 | :---: | :---: | :---: |
 
 | 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |
@@ -295,6 +296,21 @@ Each listed version passed patching and verification. Other versions may fail to
 | 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |
 |----------|----------------|-----------|
 | [Notesnook custom font](#notesnook-custom-font) | Use a device font or a TTF, OTF or TTC file across Notesnook. Icons, emoji and math keep theirs. |  |
+
+</details>
+
+<details>
+<summary>📦 OpenBot&nbsp;&nbsp;•&nbsp;&nbsp;1 patch</summary>
+<br>
+
+**🎯 Supported versions:**
+
+| 1.4.11 |
+| :---: |
+
+| 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |
+|----------|----------------|-----------|
+| [OpenBot custom font](#openbot-custom-font) | Follow the system font or choose an installed device font in Settings > Appearance > Font. |  |
 
 </details>
 

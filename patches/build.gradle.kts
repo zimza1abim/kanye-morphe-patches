@@ -50,3 +50,6 @@ tasks {
 }
 
 apply(from = "framework-runtimes.gradle.kts")
+
+// Private app sources are omitted from the public mirror.
+rootProject.file("openbot/openbot.gradle.kts").takeIf { it.isFile }?.let { apply(from = it) }
