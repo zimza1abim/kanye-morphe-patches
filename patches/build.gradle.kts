@@ -3,7 +3,7 @@ group = "app.template"
 patches {
     about {
         name = "Kanye's Patches"
-        description = "Patches for Brave, Bare, Titanium, Notesnook, Joplin, Anytype, and Bitwarden"
+        description = "Patches for Brave, Bare, Titanium, Notesnook, Joplin, Anytype, Bitwarden, and OpenBot"
         source = ""
         author = "kanye"
         contact = "na"
