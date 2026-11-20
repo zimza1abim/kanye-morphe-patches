@@ -44,6 +44,7 @@
     "label": "Joplin",
     "repo": "laurent22/joplin-android",
     "releaseNamePrefix": "android-v",
+    "prereleaseIsBeta": true,
     "apkAsset": "^joplin-v[0-9.]+\\.apk$",
     "sha256Asset": null,
     "locator": null,
