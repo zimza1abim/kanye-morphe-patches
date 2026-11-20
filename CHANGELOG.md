@@ -1,3 +1,10 @@
+## [0.1.6](https://github.com/zimza1abim/kanye-morphe-patches/compare/v0.1.5...v0.1.6) (2026-11-20)
+
+### 🚀 Updated App Support
+
+* support OpenBot 1.4.12
+
+
 ## [0.1.5](https://github.com/zimza1abim/kanye-morphe-patches/compare/v0.1.4...v0.1.5) (2026-11-20)
 
 ### 🐛 Bug Fixes

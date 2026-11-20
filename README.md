@@ -178,7 +178,7 @@ Each listed version passed patching and verification. Other versions may fail to
 | Brave Browser | `com.brave.browser` | `1.99.55` `1.100.56` `1.100.58` |
 | Joplin | `net.cozic.joplin` | `3.7.10` `3.7.11` `3.7.12` |
 | Notesnook | `com.streetwriters.notesnook` | `3.4.14` `3.4.15` `3.4.16` |
-| OpenBot | `run.openbot.mobile` | `1.4.11` |
+| OpenBot | `run.openbot.mobile` | `1.4.12` |
 <!-- VERSIONS_END -->
 
 > [!NOTE]
@@ -187,7 +187,7 @@ Each listed version passed patching and verification. Other versions may fail to
 ## 🩹 Patches
 
 <!-- PATCHES_START -->
-> **[v0.1.5](../../releases/tag/v0.1.5)**&nbsp;&nbsp;•&nbsp;&nbsp;18 patches total
+> **[v0.1.6](../../releases/tag/v0.1.6)**&nbsp;&nbsp;•&nbsp;&nbsp;18 patches total
 <details>
 <summary>📦 Anytype&nbsp;&nbsp;•&nbsp;&nbsp;1 patch</summary>
 <br>
@@ -309,7 +309,7 @@ Each listed version passed patching and verification. Other versions may fail to
 
 **🎯 Supported versions:**
 
-| 1.4.11 |
+| 1.4.12 |
 | :---: |
 
 | 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |
