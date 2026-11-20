@@ -1,6 +1,6 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated when semantic release (release.yml) runs. Manually editing this file can break your releases and break third party tools that use this file.",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "patches": [
     {
       "name": "Anytype custom font",
@@ -490,13 +490,6 @@
           "signatures": null,
           "targets": [
             {
-              "version": "3.7.8",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            },
-            {
               "version": "3.7.10",
               "versionCodes": null,
               "isExperimental": false,
@@ -505,6 +498,13 @@
             },
             {
               "version": "3.7.11",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            },
+            {
+              "version": "3.7.12",
               "versionCodes": null,
               "isExperimental": false,
               "minSdk": null,
