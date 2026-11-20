@@ -172,7 +172,7 @@ Each listed version passed patching and verification. Other versions may fail to
 | App | Package | Supported versions |
 |---|---|---|
 | Anytype | `io.anytype.app` | `0.48.10` `0.49.0` `0.50.4` |
-| Titanium Browser | `io.github.jqssun.helium` | `157.0.8103.38` `157.0.8103.50` `157.0.8103.78` |
+| Titanium Browser | `io.github.jqssun.helium` | `157.0.8103.50` `157.0.8103.78` `158.0.8127.42` |
 | Bare Browser | `org.barebrowser` | `2.0.4` `2.0.5` `2.0.7` |
 | Bitwarden | `com.x8bit.bitwarden` | `2026.10.1` `2026.11.1` |
 | Brave Browser | `com.brave.browser` | `1.99.55` `1.100.56` `1.100.58` |
@@ -187,7 +187,7 @@ Each listed version passed patching and verification. Other versions may fail to
 ## 🩹 Patches
 
 <!-- PATCHES_START -->
-> **[v0.1.4](../../releases/tag/v0.1.4)**&nbsp;&nbsp;•&nbsp;&nbsp;18 patches total
+> **[v0.1.5](../../releases/tag/v0.1.5)**&nbsp;&nbsp;•&nbsp;&nbsp;18 patches total
 <details>
 <summary>📦 Anytype&nbsp;&nbsp;•&nbsp;&nbsp;1 patch</summary>
 <br>
@@ -209,7 +209,7 @@ Each listed version passed patching and verification. Other versions may fail to
 
 **🎯 Supported versions:**
 
-| 157.0.8103.38 | 157.0.8103.50 | 157.0.8103.78 |
+| 157.0.8103.50 | 157.0.8103.78 | 158.0.8127.42 |
 | :---: | :---: | :---: |
 
 | 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |
