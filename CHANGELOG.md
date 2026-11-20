@@ -1,3 +1,10 @@
+## [0.1.3](https://github.com/zimza1abim/kanye-morphe-patches/compare/v0.1.2...v0.1.3) (2026-11-20)
+
+### 🚀 Updated App Support
+
+* support Joplin 3.7.12 and drop 3.7.8
+
+
 ## [0.1.2](https://github.com/zimza1abim/kanye-morphe-patches/compare/v0.1.1...v0.1.2) (2026-11-20)
 
 ### 🚀 Updated App Support

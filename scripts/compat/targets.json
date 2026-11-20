@@ -92,5 +92,18 @@
       "Bitwarden custom special characters",
       "Bitwarden trust re-signed browsers for passkeys"
     ]
+  },
+  "openbot": {
+    "label": "OpenBot",
+    "repo": "nightly-labs/openbot",
+    "releaseNamePrefix": "OpenBot for Android ",
+    "apkAsset": "^OpenBot-[0-9.]+\\.apk$",
+    "sha256Asset": null,
+    "locator": null,
+    "versionsFile": null,
+    "adapterPath": "openbot/resources/openbot/adapters/{version}.bundle",
+    "patches": [
+      "OpenBot custom font"
+    ]
   }
 }
