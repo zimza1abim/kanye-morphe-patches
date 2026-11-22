@@ -35,7 +35,7 @@
 | 🗒️ | **Joplin** | `net.cozic.joplin` | Flash-free custom font · Blush Pink theme |
 | 🧩 | **Anytype** | `io.anytype.app` | App-wide custom font |
 | 🤖 | **OpenBot** | `run.openbot.mobile` | App-wide custom font · System default · Installed fonts |
-| 🐋 | **Orca** | `dev.orca.app` | App-wide font · Installed fonts · TTF import |
+| 🐋 | **Orca** | `dev.orca.app` | App-wide font · Installed fonts · TTF import · Bot pictures on Home |
 | 🔐 | **Bitwarden** | `com.x8bit.bitwarden` | Passphrase length · Custom special characters · Passkeys in patched browsers |
 
 Get the original APKs from each app's official GitHub releases.
@@ -88,7 +88,7 @@ Get the original APKs from each app's official GitHub releases.
 - Adds a **Font** row to the settings
 - Anytype: pick a TTF or OTF file
 - OpenBot: follow the phone font, or use an installed **font APK** or a **TTF file**
-- Orca: the phone font, bundled Pretendard, an installed **font APK**, a system font or a **TTF file**, applied to every screen including chats, code and the terminal; each row previews its own face
+- Orca: the phone font, bundled Pretendard, an installed **font APK**, a system font or a **TTF file**, applied to every screen including chats, code and the terminal; each row previews its own face; the Feed tab's bots and the Bots tab draw each bot's own picture
 - The chosen file is validated and copied into the app's private storage
 
 </td>
@@ -192,7 +192,7 @@ Each listed version passed patching and verification. Other versions may fail to
 ## 🩹 Patches
 
 <!-- PATCHES_START -->
-> **[v0.2.0](../../releases/tag/v0.2.0)**&nbsp;&nbsp;•&nbsp;&nbsp;19 patches total
+> **[v0.3.0](../../releases/tag/v0.3.0)**&nbsp;&nbsp;•&nbsp;&nbsp;19 patches total
 <details>
 <summary>📦 Anytype&nbsp;&nbsp;•&nbsp;&nbsp;1 patch</summary>
 <br>
@@ -334,7 +334,7 @@ Each listed version passed patching and verification. Other versions may fail to
 
 | 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |
 |----------|----------------|-----------|
-| [Orca custom font](#orca-custom-font) | Choose a system, installed or imported font in Settings > Appearance > Font. Code and icon fonts keep their faces. |  |
+| [Orca font and bot pictures](#orca-font-and-bot-pictures) | Choose a system, installed or imported font in Settings > Appearance > Font, and see each bot's picture on Home. Code and icon fonts keep their faces. |  |
 
 </details>
 
