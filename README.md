@@ -183,7 +183,7 @@ Each listed version passed patching and verification. Other versions may fail to
 | Joplin | `net.cozic.joplin` | `3.7.10` `3.7.11` `3.7.12` |
 | Notesnook | `com.streetwriters.notesnook` | `3.4.15` `3.4.16` `3.4.17` |
 | OpenBot | `run.openbot.mobile` | `1.4.12` |
-| Orca | `dev.orca.app` | `0.0.68` |
+| Orca | `dev.orca.app` | `0.0.68` `0.0.70` |
 <!-- VERSIONS_END -->
 
 > [!NOTE]
@@ -192,7 +192,7 @@ Each listed version passed patching and verification. Other versions may fail to
 ## 🩹 Patches
 
 <!-- PATCHES_START -->
-> **[v0.3.2](../../releases/tag/v0.3.2)**&nbsp;&nbsp;•&nbsp;&nbsp;19 patches total
+> **[v0.3.3](../../releases/tag/v0.3.3)**&nbsp;&nbsp;•&nbsp;&nbsp;19 patches total
 <details>
 <summary>📦 Anytype&nbsp;&nbsp;•&nbsp;&nbsp;1 patch</summary>
 <br>
@@ -329,8 +329,8 @@ Each listed version passed patching and verification. Other versions may fail to
 
 **🎯 Supported versions:**
 
-| 0.0.68 |
-| :---: |
+| 0.0.68 | 0.0.70 |
+| :---: | :---: |
 
 | 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |
 |----------|----------------|-----------|
