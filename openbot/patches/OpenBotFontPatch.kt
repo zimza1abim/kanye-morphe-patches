@@ -47,16 +47,16 @@ private val openbotResources = resourcePatch {
     execute {
         val bundle = get("assets/index.android.bundle")
         if (!bundle.isFile) throw PatchException("OpenBot embedded bundle not found")
-        val metadata = resource("openbot/adapters/1.4.12.properties")?.use {
+        val metadata = resource("openbot/adapters/1.4.13.properties")?.use {
             Properties().apply { load(it) }
-        } ?: throw PatchException("OpenBot 1.4.12 adapter metadata is missing")
+        } ?: throw PatchException("OpenBot 1.4.13 adapter metadata is missing")
         if (sha256(bundle.readBytes()) != metadata.getProperty("originalSha256"))
-            throw PatchException("Unsupported OpenBot bundle. Use the verified Android 1.4.12 APK.")
-        val adapter = resource("openbot/adapters/1.4.12.bundle")?.use { it.readBytes() }
+            throw PatchException("Unsupported OpenBot bundle. Use the verified Android 1.4.13 APK.")
+        val adapter = resource("openbot/adapters/1.4.13.bundle")?.use { it.readBytes() }
             ?: throw PatchException("OpenBot Appearance adapter is missing")
         if (sha256(adapter) != metadata.getProperty("patchedSha256"))
             throw PatchException("OpenBot Appearance adapter checksum mismatch")
-        val overlay = resource("openbot/adapters/1.4.12.assets.zip")?.use { it.readBytes() }
+        val overlay = resource("openbot/adapters/1.4.13.assets.zip")?.use { it.readBytes() }
             ?: throw PatchException("OpenBot adapter assets are missing")
         if (sha256(overlay) != metadata.getProperty("assetsSha256"))
             throw PatchException("OpenBot adapter assets checksum mismatch")
@@ -154,7 +154,7 @@ val openbotCustomFontPatch = bytecodePatch(
         name = "OpenBot",
         packageName = "run.openbot.mobile",
         apkFileType = ApkFileType.APK,
-        targets = listOf(AppTarget(version = "1.4.12")),
+        targets = listOf(AppTarget(version = "1.4.13")),
     ))
     dependsOn(openbotResources)
     extendWith("extensions/openbot.mpe")
