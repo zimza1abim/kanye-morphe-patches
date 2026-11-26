@@ -192,7 +192,7 @@ Each listed version passed patching and verification. Other versions may fail to
 ## 🩹 Patches
 
 <!-- PATCHES_START -->
-> **[v0.3.7](../../releases/tag/v0.3.7)**&nbsp;&nbsp;•&nbsp;&nbsp;19 patches total
+> **[v0.3.8](../../releases/tag/v0.3.8)**&nbsp;&nbsp;•&nbsp;&nbsp;19 patches total
 <details>
 <summary>📦 Anytype&nbsp;&nbsp;•&nbsp;&nbsp;1 patch</summary>
 <br>

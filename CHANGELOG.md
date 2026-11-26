@@ -1,3 +1,10 @@
+## [0.3.8](https://github.com/zimza1abim/kanye-morphe-patches/compare/v0.3.7...v0.3.8) (2026-11-26)
+
+### 🐛 Bug Fixes
+
+* hold OpenBot to the three-version support scope
+
+
 ## [0.3.7](https://github.com/zimza1abim/kanye-morphe-patches/compare/v0.3.6...v0.3.7) (2026-11-26)
 
 ### 🚀 Updated App Support

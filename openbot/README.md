@@ -1,7 +1,7 @@
 # OpenBot custom font
 
 Morphe patch for the Android package `run.openbot.mobile`. Supported APKs are
-listed in `patches/OpenBotFontPatch.kt`; adapter identities are in
+listed in `patches/OpenBotCompatibility.kt`; adapter identities are in
 `resources/openbot/adapters/*.properties`. Unknown bundle hashes stop patching.
 
 ## Behavior
