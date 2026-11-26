@@ -1,3 +1,10 @@
+## [0.3.6](https://github.com/zimza1abim/kanye-morphe-patches/compare/v0.3.5...v0.3.6) (2026-11-26)
+
+### ✨ New Features
+
+* apply custom fonts to Chinese text in Brave and Titanium
+
+
 ## [0.3.5](https://github.com/zimza1abim/kanye-morphe-patches/compare/v0.3.4...v0.3.5) (2026-11-26)
 
 ### 🚀 Updated App Support
