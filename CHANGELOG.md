@@ -1,3 +1,10 @@
+## [0.3.7](https://github.com/zimza1abim/kanye-morphe-patches/compare/v0.3.6...v0.3.7) (2026-11-26)
+
+### 🚀 Updated App Support
+
+* support Orca 0.0.71 and Notesnook 3.4.17
+
+
 ## [0.3.6](https://github.com/zimza1abim/kanye-morphe-patches/compare/v0.3.5...v0.3.6) (2026-11-26)
 
 ### ✨ New Features
