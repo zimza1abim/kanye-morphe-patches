@@ -1,3 +1,10 @@
+## [0.3.5](https://github.com/zimza1abim/kanye-morphe-patches/compare/v0.3.4...v0.3.5) (2026-11-26)
+
+### 🚀 Updated App Support
+
+* support Bare 2.0.9, Titanium 158.0.8127.92
+
+
 ## [0.3.4](https://github.com/zimza1abim/kanye-morphe-patches/compare/v0.3.3...v0.3.4) (2026-11-25)
 
 ### 🚀 Updated App Support
